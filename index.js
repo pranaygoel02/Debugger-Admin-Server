@@ -8,6 +8,7 @@ const port = process.env.PORT || 8000;
 
 const questionRouter = require('./routes/questionRoute');
 const roundRouter = require('./routes/roundRoute');
+const resultRouter = require('./routes/resultRoute');
 
 app.use(express.json({limit: '50mb'}));
 app.use(cors())
@@ -25,3 +26,4 @@ app.get('/', (req, res) => {
 //////// Routes //////////////
 app.use('/question', questionRouter);
 app.use('/round', roundRouter);
+app.use('/result', resultRouter);
